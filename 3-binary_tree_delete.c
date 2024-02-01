@@ -7,14 +7,14 @@
  */
 void binary_tree_delete(binary_tree_t *tree)
 {
-    /* Base case: If the tree is NULL, do nothing */
-    if (tree == NULL)
-        return;
+	/* Base case: If the tree is NULL, do nothing */
+	if (tree == NULL)
+		return;
 
-    /* Recursively delete the left and right subtrees */
-    binary_tree_delete(tree->left);
-    binary_tree_delete(tree->right);
+	/* Recursively delete the left and right subtrees */
+	binary_tree_delete(tree->left);
+	binary_tree_delete(tree->right);
 
-    /* Free the current node */
-    free(tree);
+	/* Free the current node */
+	free(tree);
 }
